@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>米字格简体字练字帖生成器</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="toolbar no-print">
+    <h1>米字格简体字练字帖生成器</h1>
+    <div class="controls">
+      <label for="charInput">输入汉字：</label>
+      						<textarea id="charInput" rows="1" placeholder="例如：中华文明上下五千年"></textarea>
+      <button id="generateBtn">生成练字帖</button>
+      <button id="printBtn" class="primary">打印 A4</button>
+    </div>
+    <p class="hint">提示：可直接粘贴多个汉字（会忽略空格和重复字符）。第一行显示笔画递进，第二行为空格用于练习。</p>
+  </header>
+
+  <main id="sheet" class="sheet">
+  </main>
+
+  <footer class="no-print footer-note">
+    <small>数据来源：hanzi-writer-data（MIT 许可）。</small>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
